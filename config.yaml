@@ -1,2 +1,3 @@
-path: "my_parkinson.joblib"
+
 features: ['D2', 'MDVP:Fhi(Hz)']
+path: "my_parkinson.joblib"
