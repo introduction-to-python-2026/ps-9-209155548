@@ -22,5 +22,3 @@ y_pred = svc.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
 
-import joblib
-joblib.dump(svc, 'svc.joblib')
