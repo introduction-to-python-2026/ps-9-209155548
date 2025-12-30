@@ -1,7 +1,7 @@
 import pandas as pd
 df = pd.read_csv('/content/parkinsons.csv')
 df = df.dropna()
-display(df.head())
+df.head()
 
 X = df[['D2', 'MDVP:Fhi(Hz)']]
 y = df['status']
@@ -11,13 +11,13 @@ scaler = MinMaxScaler()
 x_scaled = scaler.fit_transform(X)
 
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2, random_state=42) # Added random_state for reproducibility
+x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2)
 
 from sklearn.svm import SVC
-svc = SVC() # Using svc as variable name as in user's provided code
+svc = SVC()
 svc.fit(x_train, y_train)
 
 from sklearn.metrics import accuracy_score
 y_pred = svc.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy}")
+print(accuracy)
