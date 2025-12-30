@@ -6,7 +6,6 @@ df.head()
 X = df[['HNR', 'D2']]
 y = df['status']
 
-
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 x_scaled = scaler.fit_transform(X)
@@ -22,5 +21,3 @@ from sklearn.metrics import accuracy_score
 y_pred = model.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
-
-
