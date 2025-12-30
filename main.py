@@ -5,15 +5,8 @@ df = df.dropna()
 df.head()
 
 X = df[['HNR', 'D2']]
-
-
 y = df['status']
 
-print("Selected input features (X) head:")
-display(X.head())
-
-print("\nSelected output feature (y) head:")
-display(y.head())
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
