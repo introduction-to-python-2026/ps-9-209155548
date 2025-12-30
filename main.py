@@ -18,7 +18,7 @@ svc = SVC()
 svc.fit(x_train, y_train)
 
 from sklearn.metrics import accuracy_score
-y_pred = model.predict(x_test)
+y_pred = svc.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
 
