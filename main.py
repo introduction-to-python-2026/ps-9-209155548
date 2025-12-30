@@ -1,4 +1,5 @@
 import pandas as pd
+
 df = pd.read_csv('/content/parkinsons.csv')
 df = df.dropna()
 df.head()
@@ -21,3 +22,6 @@ from sklearn.metrics import accuracy_score
 y_pred = svc.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
+
+import joblib
+joblib.dump(svc, 'my_parkinson.joblib')
