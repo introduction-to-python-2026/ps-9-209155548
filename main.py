@@ -11,7 +11,7 @@ scaler = MinMaxScaler()
 x_scaled = scaler.fit_transform(X)
 
 from sklearn.model_selection import train_test_split
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
+x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2)
 
 from sklearn.svm import SVC
 svc = SVC()
@@ -22,3 +22,5 @@ y_pred = svc.predict(x_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
 
+import joblib
+joblib.dump(svc, 'my_parkinson.joblib')
