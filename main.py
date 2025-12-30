@@ -3,7 +3,7 @@ df = pd.read_csv('/content/parkinsons.csv')
 df = df.dropna()
 df.head()
 
-X = df[['HNR', 'D2']]
+X = df[['D2', 'MDVP:Fhi(Hz)']]
 y = df['status']
 
 from sklearn.preprocessing import MinMaxScaler
