@@ -23,4 +23,4 @@ accuracy = accuracy_score(y_test, y_pred)
 print(accuracy)
 
 import joblib
-joblib.dump(svc, 'parkinson.joblib')
+joblib.dump(svc, 'knn_parkinson.joblib')
