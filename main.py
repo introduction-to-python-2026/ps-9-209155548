@@ -1,5 +1,4 @@
 import pandas as pd
-
 df = pd.read_csv('/content/parkinsons.csv')
 df = df.dropna()
 df.head()
